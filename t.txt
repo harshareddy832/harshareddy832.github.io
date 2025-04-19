@@ -1,0 +1,72 @@
+
+1
+Harsha Pasham Machine Learning Engineer / AI Solutions Developer 
+Jersey City |. pashamsaisriharshareddy@gmail.com | +1 (201) 241-9415 | Linkedin  
+Summary Machine Learning Engineer with expertise in developing scalable AI solutions using distributed computing 
+frameworks. Currently focused on architecting a movie recommendation system leveraging Apache Spark for 
+parallel processing and GCP cloud infrastructure for deployment. Experienced in end-to-end ML pipelines (89-97% 
+accuracy rates) with strong proficiency in PyTorch, TensorFlow, and advanced data processing techniques. 
+Combines deep technical knowledge in distributed systems with practical implementation skills to build production-
+ready recommendation engines that enhance user engagement through personalized content delivery. Adept at 
+optimizing ML models for large-scale datasets while maintaining performance in cloud environments. 
+Technical Skills Core ML/DL Frameworks: PyTorch, TensorFlow, Scikit-learn, LLM APIs 
+Programming & Data Tools: Python (Pandas, NumPy), C++,  SQL, Git, OpenCV, Matplotlib, Spark 
+AI System Infra: GPU optimisation and Benchmarking 
+ML Lifecycle & Deployment: End-to-End Pipelines for Model Deployment, Model Optimization (Hyperparameter 
+Tuning), Feature Engineering, A/B Testing 
+Mathematical Foundations: Statistical Analysis (p<0.001 Validation), Linear Algebra(Model Optimisation), Time 
+Series decomposition, Regression Modeling 
+Additional Domain Expertise: NLP (LLM integration), Predictive Healthcare Analytics, Economic Forecasting, 
+Real Estate Pattern Recognition, Cloud Deployment(AWS, GCP through coursework), Kubernetes, React 
+Professional Experience Machine Learning Engineer 
+Stevens Institute of Technology (Projects) | Sep 2023 - Present 
+• Production ML Systems: Designed and deployed end-to-end pipelines for predictive analytics with 
+emphasis on model optimization and system scalability. Achieved 97.6% accuracy in time-series 
+forecasting using SARIMA models. 
+• AI Tooling: Developed custom tools leveraging GPT APIs for automated alignment of job descriptions 
+with candidate profiles. Focused on system efficiency improvements. 
+Event Operations 
+Debaun Student Staff, Stevens Institute of Technology | Sep 2024 - Present 
+• Engineered protocols for 12+ high-stake events, maintaining 100% execution accuracy under time-
+critical constraints 
+• Developed incident resolutions with <40-second turnaround, demonstrating crisis management 
+Technical Projects Scalable Movie Recommendation System | Apache Spark, GCP, PySpark, MLlib 
+• Architecting a large-scale movie recommendation engine using MovieLens 25M dataset (25M ratings, 
+162K users, 62K movies) on distributed computing infrastructure 
+• Implementing Alternating Least Squares (ALS) matrix factorization algorithm through Spark MLlib for 
+optimized collaborative filtering in a distributed environment 
+• Developing comprehensive ETL pipeline using PySpark DataFrame operations to process and 
+transform 1GB+ of sparse user-movie interaction data 
+• Designing progressive scaling approach from local development (10% data) to multi-node cluster 
+deployment (5+ nodes) on GCP for full dataset processing 
+• Establishing performance benchmarks targeting sub-0.9 RMSE and optimizing for both 
+recommendation quality (MAP) and system performance metrics 
+Fraud Detection System | Python, PyTorch, XGBoost 
+• Developed a hybrid fraud detection system combining Graph Neural Networks (GNN) and XGBoost,     
+achieving 93% precision on the IEEE-CIS fraud detection dataset 
+• Engineered a novel graph-based approach to model transaction relationships across multiple features 
+(email domains, card IDs, device types), improving fraud pattern detection by 15% 
+• Implemented an ensemble architecture that leverages both network structure (GNN) and feature 
+interactions (XGBoost) to reduce false positives by 25% 
+• Built end-to-end data pipeline using PyTorch Geometric for graph processing and optimized batch 
+processing to handle 100K+ transactions efficiently 
+Real Estate Investment Optimizer | Python, Statistical Analysis 
+• Identified 12-18% undervalued NYC properties (p<0.001) through analysis of 4,801 listings and 17-
+variable modeling 
+• Delivered Actionable insights on square footage-price correlations, enabling data-driven investment 
+strategies 
+Weeds Detection System | Computer Vision, YOLO 
+• Achieved state-of-the-art precision in agricultural automation using YOLOv7/v5 comparative analysis 
+• Processed complex image datasets for crop/weed classification in soy and corn fields 
+Education MS in Data Science 
+Stevens Institute of Technology | GPA: 3.56/4 |  2023-2025 
+B.Tech in Electrical & Computer Engineering 
+Amrita Vishwa Vidyapeetham |  2019-2023 
+Certifications & Specializations Neural Networks and Deep Learning | Deeplearning.AI (2021) 
+• Neural Networks Architecture - Hyperparamter Tuning - Vectorization Techniqiues 
+TensorFlow for AI, ML and Deep Learning | Deeplearning.AI (2021) 
+• Production ML Systems -  Custom Model Architectures - TF Lite Deployment 
+Machine Learning | Stanford Online (2021) 
+• Advanced Regression Analysis -  Decision Tree Optimization - Bias/Variance Control 
+AI For Everyone | Deeplearning.AI (2021) 
+• ML Strategy Development -  Cross-Functional AI Implementation
