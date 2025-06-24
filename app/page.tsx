@@ -16,26 +16,32 @@ import ThemeToggle from './components/ThemeToggle';
 const projects = [
   {
     title: 'Scalable Movie Recommendation System',
-    description: 'Architecting a large-scale movie recommendation engine using MovieLens 25M dataset (25M ratings, 162K users, 62K movies) on distributed computing infrastructure. Implementing Alternating Least Squares (ALS) matrix factorization algorithm through Spark MLlib for optimized collaborative filtering.',
-    technologies: ['Apache Spark', 'GCP', 'PySpark', 'MLlib'],
+    description: 'Designed and built a scalable recommendation system using ALS on MovieLens 25M, deployed locally and to multi-node GCP Dataproc clusters. Incorporated Clustering and relevance scoring and diversity optimisation. Tuned ALS hyperparameters and Spark executor configs to process full dataset with RMSE under 0.8. Developed fallback strategies for cold-start handling and a built-in diversity scoring using cosine metrics.',
+    technologies: ['Apache Spark', 'GCP', 'PySpark', 'MLlib', 'Dataproc', 'ALS'],
     githubUrl: '#',
   },
   {
     title: 'Fraud Detection System',
-    description: 'Developed a hybrid fraud detection system combining Graph Neural Networks (GNN) and XGBoost, achieving 93% precision on the IEEE-CIS fraud detection dataset. Engineered a novel graph-based approach to model transaction relationships across multiple features.',
-    technologies: ['Python', 'PyTorch', 'XGBoost', 'GNN'],
+    description: 'Built a hybrid fraud detection model with GNNs for transaction graphs and XGBoost for tabular classification. Boosted fraud precision to 93%, cutting false positives by 25% through ensemble fusion.',
+    technologies: ['Python', 'PyTorch', 'XGBoost', 'GNN', 'PyTorch Geometric'],
     githubUrl: '#',
   },
   {
-    title: 'Real Estate Investment Optimizer',
-    description: 'Identified 12-18% undervalued NYC properties through analysis of 4,801 listings and 17-variable modeling. Delivered actionable insights on square footage-price correlations, enabling data-driven investment strategies.',
-    technologies: ['Python', 'Statistical Analysis', 'Data Visualization'],
+    title: 'JobMate - Resume Tailoring & Cover Letter Generator',
+    description: 'Developed an interactive resume and cover letter generator using NLP techniques and GPT for semantic matching and keyword fit. Used Streamlit to deploy a sleek, user-friendly app that reduces job application overhead.',
+    technologies: ['Python', 'Streamlit', 'OpenAI API', 'NLP'],
     githubUrl: '#',
   },
   {
-    title: 'Weeds Detection System',
-    description: 'Achieved state-of-the-art precision in agricultural automation using YOLOv7/v5 comparative analysis. Processed complex image datasets for crop/weed classification in soy and corn fields.',
-    technologies: ['Computer Vision', 'YOLO', 'OpenCV'],
+    title: 'Real Estate Investment Optimiser',
+    description: 'Identified 12-18% undervalued NYC properties (p<0.001) through analysis of 4,801 listings and 17-variable modelling. Engineered a spatial binning approach over latitude and longitude features to aggregate property-level data into geographic grids, producing interpretable bin maps that visually resembled NYC\'s structure and enabled trend analysis.',
+    technologies: ['Python', 'Statistical Analysis', 'Data Visualization', 'Spatial Analysis'],
+    githubUrl: '#',
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'Built a fully responsive portfolio to showcase projects, resume, and contact info using React TypeScript. Deployed on Github Pages with custom component library and mobile-first design.',
+    technologies: ['TypeScript', 'React', 'Vite', 'CSS', 'Github Pages'],
     githubUrl: '#',
   },
 ];
@@ -50,20 +56,23 @@ const skills = [
   { name: 'Apache Spark', level: 90, icon: <SiApachespark /> },
   { name: 'GCP', level: 85, icon: <SiGooglecloud /> },
   { name: 'Kubernetes', level: 80, icon: <SiKubernetes /> },
+  { name: 'AWS', level: 85, icon: <FaServer /> },
+  { name: 'TypeScript', level: 80, icon: <FaCode /> },
+  { name: 'XGBoost', level: 90, icon: <FaBrain /> },
 ];
 
 const certifications = [
   {
-    title: 'Neural Networks and Deep Learning',
-    issuer: 'Deeplearning.AI',
-    year: '2021',
-    skills: ['Neural Networks Architecture', 'Hyperparameter Tuning', 'Vectorization Techniques']
+    title: 'Cloud Foundations',
+    issuer: 'AWS Academy',
+    year: '2024',
+    skills: ['AWS Cloud Infrastructure', 'Cloud Computing Fundamentals', 'AWS Services']
   },
   {
-    title: 'TensorFlow for AI, ML and Deep Learning',
-    issuer: 'Deeplearning.AI',
-    year: '2021',
-    skills: ['Production ML Systems', 'Custom Model Architectures', 'TF Lite Deployment']
+    title: 'Data Engineering',
+    issuer: 'AWS Academy',
+    year: '2024',
+    skills: ['Data Pipeline Design', 'AWS Data Services', 'ETL Processes']
   },
   {
     title: 'Machine Learning',
@@ -72,10 +81,16 @@ const certifications = [
     skills: ['Advanced Regression Analysis', 'Decision Tree Optimization', 'Bias/Variance Control']
   },
   {
-    title: 'AI For Everyone',
-    issuer: 'Deeplearning.AI',
+    title: 'Neural Networks & Deep Learning',
+    issuer: 'Deeplearning.ai',
     year: '2021',
-    skills: ['ML Strategy Development', 'Cross-Functional AI Implementation']
+    skills: ['Neural Networks Architecture', 'Hyperparameter Tuning', 'Vectorization Techniques']
+  },
+  {
+    title: 'TensorFlow for AI/ML/DL',
+    issuer: 'Deeplearning.ai',
+    year: '2021',
+    skills: ['Production ML Systems', 'Custom Model Architectures', 'TF Lite Deployment']
   }
 ];
 
@@ -83,20 +98,41 @@ const experience = [
   {
     role: 'Machine Learning Engineer',
     company: 'Stevens Institute of Technology (Projects)',
-    period: 'Sep 2023 - Present',
+    period: 'Sep 2023 - May 2025',
     achievements: [
-      'Designed and deployed end-to-end pipelines for predictive analytics with emphasis on model optimization and system scalability',
-      'Achieved 97.6% accuracy in time-series forecasting using SARIMA models',
-      'Developed custom tools leveraging GPT APIs for automated alignment of job descriptions with candidate profiles'
+      'Engineered and deployed ML pipelines for recommender systems and predictive analytics using Spark and GCP.',
+      'Achieved 97.6% forecasting accuracy in a SARIMA-based time-series model applied to institutional datasets.',
+      'Built GPT-powered tooling that dynamically aligns resumes to job descriptions, improving targeting efficiency.'
+    ]
+  },
+  {
+    role: 'Machine Learning Engineer',
+    company: '500x',
+    period: 'Oct 2022 - May 2023',
+    achievements: [
+      'Collaborated with cross-functional teams to build and deploy a recommendation system for a luxury automotive client, improving content relevance and increasing in-app engagement by 28% through iterative tuning of ranking models and feedback loops.',
+      'Contributed to an AI-powered jewellery design SaaS, supporting model dev for design recognition and style matching, reducing manual curation time by 40% and enabled scalable personalisation for over 5000+ product variations.',
+      'Partnered with backend and DevOps engineers to containerise and deploy ML models as REST APIs in production, reducing model inference latency by ~35% and improving reliability across mobile and web platforms.',
+      'Assisted in data engineering efforts to preprocess and align multi-source user interaction data for political tech analytics (PolStrat), enabling feature extraction that boosted lead scoring precision by 18%.',
+      'Participated in agile sprints to support ML experimentation for NLP and recommendation tasks across 3+ projects; conducted A/B testing and model evaluation, contributing to decision-making in client delivery cycles.'
+    ]
+  },
+  {
+    role: 'Web Developer',
+    company: 'Freelance',
+    period: 'Feb 2022 - May 2022',
+    achievements: [
+      'Developed 3+ portfolio websites for photographers, increasing client visibility significantly.',
+      'Improved user engagement and traffic by 20% through responsive design and SEO optimisation.'
     ]
   },
   {
     role: 'Event Operations',
     company: 'Debaun Student Staff, Stevens Institute of Technology',
-    period: 'Sep 2024 - Present',
+    period: 'Sep 2024 - May 2025',
     achievements: [
-      'Engineered protocols for 12+ high-stake events, maintaining 100% execution accuracy under time-critical constraints',
-      'Developed incident resolutions with <40-second turnaround, demonstrating crisis management'
+      'Directed high-impact event setups (12+) under time-critical conditions with zero execution failures.',
+      'Developed real-time response play-books, reducing issue resolution time by over 60%.'
     ]
   }
 ];
@@ -106,7 +142,7 @@ const education = [
     degree: 'MS in Data Science',
     institution: 'Stevens Institute of Technology',
     period: '2023-2025',
-    gpa: '3.56/4'
+    gpa: '3.6/4'
   },
   {
     degree: 'B.Tech in Electrical & Computer Engineering',
@@ -117,39 +153,43 @@ const education = [
 
 const skillCategories = [
   {
-    title: 'Machine Learning',
+    title: 'Languages & Tools',
+    icon: <FaCode />,
+    skills: [
+      { name: 'Python', level: 95, icon: <FaPython /> },
+      { name: 'SQL', level: 90, icon: <FaDatabase /> },
+      { name: 'TypeScript', level: 80, icon: <FaCode /> },
+      { name: 'React', level: 85, icon: <FaReact /> },
+    ]
+  },
+  {
+    title: 'ML/DL Frameworks',
     icon: <FaBrain />,
     skills: [
       { name: 'PyTorch', level: 95, icon: <SiPytorch /> },
       { name: 'TensorFlow', level: 90, icon: <SiTensorflow /> },
       { name: 'Scikit-learn', level: 95, icon: <SiScikitlearn /> },
+      { name: 'XGBoost', level: 90, icon: <FaBrain /> },
     ]
   },
   {
-    title: 'Development',
-    icon: <FaCode />,
-    skills: [
-      { name: 'Python', level: 95, icon: <FaPython /> },
-      { name: 'SQL', level: 90, icon: <FaDatabase /> },
-      { name: 'React', level: 85, icon: <FaReact /> },
-    ]
-  },
-  {
-    title: 'Infrastructure',
+    title: 'Big Data & Cloud',
     icon: <FaServer />,
     skills: [
       { name: 'Apache Spark', level: 90, icon: <SiApachespark /> },
       { name: 'GCP', level: 85, icon: <SiGooglecloud /> },
+      { name: 'AWS', level: 85, icon: <FaServer /> },
       { name: 'Kubernetes', level: 80, icon: <SiKubernetes /> },
     ]
   },
   {
-    title: 'Analytics',
+    title: 'Modeling & Evaluation',
     icon: <FaChartLine />,
     skills: [
-      { name: 'Data Analysis', level: 95 },
-      { name: 'Statistical Modeling', level: 90 },
-      { name: 'Time Series', level: 85 },
+      { name: 'ALS', level: 90 },
+      { name: 'GNNs', level: 85 },
+      { name: 'SARIMA', level: 90 },
+      { name: 'A/B Testing', level: 85 },
     ]
   }
 ];
@@ -215,7 +255,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-white/5 dark:bg-black/5 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-white/20 dark:bg-black/20 backdrop-blur-[2px]" />
         
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
@@ -238,7 +278,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Machine Learning Engineer / AI Solutions Developer
+              Machine Learning Engineer / AI Systems Developer
             </motion.p>
             <motion.p 
               className="text-lg mb-8 font-mono tracking-wide"
@@ -246,7 +286,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Jersey City | pashamsaisriharshareddy@gmail.com | +1 (201) 241-9415
+              Jersey City | pashamsaisriharshareddy@gmail.com | +1 (201) 241-9415 | Linkedin | Github | Portfolio
             </motion.p>
             <motion.div 
               className="flex justify-center gap-4"
@@ -296,7 +336,7 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="py-20 relative">
-        <div className="absolute inset-0 bg-white/5 dark:bg-black/5 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-white/15 dark:bg-black/15 backdrop-blur-[3px]" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -307,10 +347,10 @@ export default function Home() {
           >
             <h2 className="text-4xl font-bold mb-8 font-mono tracking-tight">About Me</h2>
             <p className="text-lg mb-6 font-mono tracking-wide leading-relaxed">
-              Machine Learning Engineer with expertise in developing scalable AI solutions using distributed computing frameworks. Currently focused on architecting a movie recommendation system leveraging Apache Spark for parallel processing and GCP cloud infrastructure for deployment.
+              Machine Learning Engineer with proven experience building and scaling AI and NLP systems across GCP, AWS, and on-prem environments. Specialised in designing robust, modular pipelines for recommendation, fraud detection, and search personalisation. Adept at turning research concepts into production-ready solutions using PySpark, TensorFlow, and cloud orchestration.
             </p>
             <p className="text-lg mb-8 font-mono tracking-wide leading-relaxed">
-              Experienced in end-to-end ML pipelines (89-97% accuracy rates) with strong proficiency in PyTorch, TensorFlow, and advanced data processing techniques. Combines deep technical knowledge in distributed systems with practical implementation skills to build production-ready recommendation engines that enhance user engagement through personalized content delivery.
+              Highly collaborative, deadline-driven, and focused on building ML systems that deliver measurable business value. Experienced in end-to-end ML pipelines with strong proficiency in PyTorch, TensorFlow, and advanced data processing techniques.
             </p>
 
             {/* Experience Section */}
@@ -321,7 +361,7 @@ export default function Home() {
               {experience.map((exp, index) => (
                 <motion.div 
                   key={index} 
-                  className="mb-6 p-6 rounded-lg border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-colors cursor-pointer bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
+                  className="mb-6 p-6 rounded-lg border border-black/15 dark:border-white/15 hover:border-black/25 dark:hover:border-white/25 transition-colors cursor-pointer bg-white/30 dark:bg-gray-900/30 backdrop-blur-[4px] shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -347,7 +387,7 @@ export default function Home() {
               {education.map((edu, index) => (
                 <motion.div 
                   key={index} 
-                  className="mb-4 p-6 rounded-lg border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-colors cursor-pointer bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
+                  className="mb-4 p-6 rounded-lg border border-black/15 dark:border-white/15 hover:border-black/25 dark:hover:border-white/25 transition-colors cursor-pointer bg-white/30 dark:bg-gray-900/30 backdrop-blur-[4px] shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -370,7 +410,7 @@ export default function Home() {
                 {certifications.map((cert, index) => (
                   <motion.div
                     key={index}
-                    className="p-6 rounded-lg border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-colors cursor-pointer bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
+                    className="p-6 rounded-lg border border-black/15 dark:border-white/15 hover:border-black/25 dark:hover:border-white/25 transition-colors cursor-pointer bg-white/30 dark:bg-gray-900/30 backdrop-blur-[4px] shadow-lg"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -384,7 +424,7 @@ export default function Home() {
                     <p className="text-black/60 dark:text-white/60 mb-2 font-mono tracking-wide">{cert.issuer} | {cert.year}</p>
                     <div className="flex flex-wrap gap-2">
                       {cert.skills.map((skill, i) => (
-                        <span key={i} className="px-3 py-1 bg-black/5 dark:bg-white/5 text-black dark:text-white rounded-full text-sm font-mono tracking-wide">
+                        <span key={i} className="px-3 py-1 bg-black/10 dark:bg-white/10 text-black dark:text-white rounded-full text-sm font-mono tracking-wide">
                           {skill}
                         </span>
                       ))}
@@ -399,7 +439,7 @@ export default function Home() {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 relative">
-        <div className="absolute inset-0 bg-white/5 dark:bg-black/5 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-white/15 dark:bg-black/15 backdrop-blur-[3px]" />
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl font-bold mb-12 text-center font-mono tracking-tight">Skills</h2>
           <SkillsCloud />
@@ -408,14 +448,14 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 relative">
-        <div className="absolute inset-0 bg-white/5 dark:bg-black/5 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-white/15 dark:bg-black/15 backdrop-blur-[3px]" />
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl font-bold mb-12 text-center font-mono tracking-tight">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="p-6 rounded-lg border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-colors cursor-pointer bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
+                className="p-6 rounded-lg border border-black/15 dark:border-white/15 hover:border-black/25 dark:hover:border-white/25 transition-colors cursor-pointer bg-white/30 dark:bg-gray-900/30 backdrop-blur-[4px] shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -443,7 +483,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.technologies.map((tech, i) => (
-                    <span key={i} className="px-3 py-1 bg-black/5 dark:bg-white/5 text-black dark:text-white rounded-full text-sm font-mono tracking-wide">
+                    <span key={i} className="px-3 py-1 bg-black/10 dark:bg-white/10 text-black dark:text-white rounded-full text-sm font-mono tracking-wide">
                       {tech}
                     </span>
                   ))}
@@ -453,6 +493,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Theme Toggle */}
+      <ThemeToggle />
     </main>
   );
 } 

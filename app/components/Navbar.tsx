@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -27,17 +27,17 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-2xl font-bold font-mono text-black">
+          <Link href="/" className="text-2xl font-bold font-mono text-black dark:text-white">
             Harsha Pasham
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#about" className="text-black/80 hover:text-black transition-colors font-mono">
+            <Link href="#about" className="text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors font-mono">
               About
             </Link>
-            <Link href="#skills" className="text-black/80 hover:text-black transition-colors font-mono">
+            <Link href="#skills" className="text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors font-mono">
               Skills
             </Link>
-            <Link href="#projects" className="text-black/80 hover:text-black transition-colors font-mono">
+            <Link href="#projects" className="text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors font-mono">
               Projects
             </Link>
           </div>
