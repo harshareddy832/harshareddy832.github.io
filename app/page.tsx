@@ -106,18 +106,6 @@ const experience = [
     ]
   },
   {
-    role: 'Machine Learning Engineer',
-    company: '500x',
-    period: 'Oct 2022 - May 2023',
-    achievements: [
-      'Collaborated with cross-functional teams to build and deploy a recommendation system for a luxury automotive client, improving content relevance and increasing in-app engagement by 28% through iterative tuning of ranking models and feedback loops.',
-      'Contributed to an AI-powered jewellery design SaaS, supporting model dev for design recognition and style matching, reducing manual curation time by 40% and enabled scalable personalisation for over 5000+ product variations.',
-      'Partnered with backend and DevOps engineers to containerise and deploy ML models as REST APIs in production, reducing model inference latency by ~35% and improving reliability across mobile and web platforms.',
-      'Assisted in data engineering efforts to preprocess and align multi-source user interaction data for political tech analytics (PolStrat), enabling feature extraction that boosted lead scoring precision by 18%.',
-      'Participated in agile sprints to support ML experimentation for NLP and recommendation tasks across 3+ projects; conducted A/B testing and model evaluation, contributing to decision-making in client delivery cycles.'
-    ]
-  },
-  {
     role: 'Web Developer',
     company: 'Freelance',
     period: 'Feb 2022 - May 2022',
