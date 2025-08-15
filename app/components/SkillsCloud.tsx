@@ -21,13 +21,13 @@ const skills = [
 
 const SkillsCloud = () => {
   return (
-    <section className="w-full py-24 bg-white dark:bg-black">
+    <section className="w-full py-24 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="group relative p-8 bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-300"
+              className="group relative p-8 glass-card rounded-2xl hover:border-amber-800/30 dark:hover:border-amber-200/30 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -37,14 +37,14 @@ const SkillsCloud = () => {
               }}
             >
               <div className="flex items-start gap-6">
-                <div className="text-3xl text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-300">
+                <div className="text-3xl text-amber-700 dark:text-amber-300 group-hover:text-amber-900 dark:group-hover:text-amber-100 transition-colors duration-300">
                   {skill.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-medium tracking-tight text-gray-900 dark:text-white mb-2">{skill.name}</h3>
-                  <p className="text-sm tracking-wide text-gray-500 dark:text-gray-400">{skill.description}</p>
+                  <h3 className="text-xl font-medium tracking-tight text-amber-900 dark:text-amber-100 mb-2">{skill.name}</h3>
+                  <p className="text-sm tracking-wide text-amber-700 dark:text-amber-300">{skill.description}</p>
                 </div>
-                <div className="absolute top-6 right-6 px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-800 text-xs font-medium tracking-wide text-gray-600 dark:text-gray-300">
+                <div className="absolute top-6 right-6 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900 text-xs font-medium tracking-wide text-amber-800 dark:text-amber-200">
                   {skill.category}
                 </div>
               </div>
